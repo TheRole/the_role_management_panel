@@ -22,4 +22,10 @@
         %label= t('.description')
         %p= f.text_field :description, class: "form-control"
 
+        - opts = options_for_select Role.all.map{|role| [ role.name, role.id ] }
+        - unless opts.empty?
+          .form-group
+            %label= t('.based_on_role')
+            = f.select :based_on_role, opts, { include_blank: true }, class: "form-control"
+
         = f.submit t('.create'), class: "btn btn-success"
