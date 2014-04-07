@@ -5,7 +5,8 @@
       %h4= link_to raw('&larr; Home'), root_path
 
   .panel.panel-primary
-    .panel-heading= t '.roles_list'
+    .panel-heading
+      = t '.roles_list'
     .panel-body
   
       - (@roles || Role.all).each do |role|
@@ -16,3 +17,5 @@
             %i.icon-remove.glyphicon.glyphicon-remove
 
       %p.new= link_to t('.new_role'),  new_admin_role_path
+      %hr
+      %p= link_to t('.roles_export'), export_admin_roles_path, class: "btn btn-xs btn-warning"
