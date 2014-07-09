@@ -1,13 +1,6 @@
 = render partial: 'sidebar'
 
 - content_for :role_main do
-  - unless @role.errors.blank?
-    - @role.errors.each do |field, message|
-      .alert.alert-danger
-        %b= t(".#{field}")
-        \:
-        = message
-
   .panel.panel-success
     .panel-heading= raw t('.create')
 
