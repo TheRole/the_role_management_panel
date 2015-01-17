@@ -21,7 +21,7 @@
 &nbsp;
 <a href="https://travis-ci.org/TheRole/DummyApp"><img src="https://travis-ci.org/TheRole/DummyApp.svg?branch=master" alt="Build Status" height="18"></a>
 &nbsp;
-<a href="https://codeclimate.com/github/TheRole/TheRoleManagePanelBootstrap3"><img src="https://codeclimate.com/github/TheRole/TheRoleManagePanelBootstrap3/badges/gpa.svg" /></a>
+<a href="https://codeclimate.com/github/TheRole/TheRoleManagementPanelBootstrap3"><img src="https://codeclimate.com/github/TheRole/TheRoleManagementPanelBootstrap3/badges/gpa.svg" /></a>
 &nbsp;
 <a href="https://www.ruby-toolbox.com/categories/rails_authorization">ruby-toolbox</a>
 </div>
