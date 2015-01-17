@@ -1,10 +1,10 @@
 <h2 align="center" class='center' style="text-align:center">
-  TheRole. Manage Panel on Bootstrap 3
+  TheRole. Management Panel on Bootstrap 3
 </h2>
 
 <p align="center" class='center' style="text-align:center">
   <b>Authorization gem for Ruby on Rails</b><br>
-  <i>with Administrative interface</i>
+  <i>with Management Panel</i>
 </p>
 
 <p align="center" class='center' style="text-align:center">
