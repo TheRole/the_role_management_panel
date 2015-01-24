@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'haml'
 
   spec.add_runtime_dependency 'rails', ['>= 3', '< 5']
+  spec.add_runtime_dependency 'coffee-rails','~>4.1.0'
 end
