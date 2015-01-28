@@ -1,3 +1,3 @@
 module TheRoleBootstrap3Ui
-  VERSION = "1.2"
+  VERSION = "2.8"
 end
