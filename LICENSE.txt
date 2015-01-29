@@ -1,4 +1,4 @@
-Copyright (c) 2014 Ilya N. Zykin
+Copyright (c) 2015 Ilya N. Zykin
 
 MIT License
 
