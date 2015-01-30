@@ -1,0 +1,26 @@
+---------------------------------------
+TheRole Management Panel
+---------------------------------------
+
+Description:
+  This generators helps to install files from TheRole Management Panel gem into your Application
+
+This text:
+  > bundle exec rails g the_role_management_panel --help
+
+Generators:
+  > bundle exec rails g the_role_management_panel install
+  - Install views, controllers, assets
+
+  > bundle exec rails g the_role_management_panel assets
+  - Install assets
+
+  > bundle exec rails g the_role_management_panel controllers
+  - Install controllers
+
+  > bundle exec rails g the_role_management_panel views
+  - Install views
+
+---------------------------------------
+~ TheRole Management Panel
+---------------------------------------
