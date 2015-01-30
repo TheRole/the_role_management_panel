@@ -1,5 +1,5 @@
-module TheRoleBootstrap3Ui
-  # TheRoleBootstrap3Ui::Routes.mixin(self)
+module TheRoleManagementPanel
+  # TheRoleManagementPanel::Routes.mixin(self)
   class Routes
     def self.mixin mapper
       mapper.resources :roles, except: :show do
