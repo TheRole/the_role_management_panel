@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zykin-ilya@ya.ru"]
   spec.summary       = %q{ TheRole Management panel }
   spec.description   = %q{ Management panel for TheRole on Bootstrap3 }
-  spec.homepage      = "https://github.com/TheRole/TheRoleManagementPanel"
+  spec.homepage      = "https://github.com/TheRole/the_role_management_panel"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -1,3 +1,3 @@
 module TheRoleManagementPanel
-  VERSION = "2.8"
+  VERSION = "3.0"
 end
