@@ -26,21 +26,16 @@
 <a href="https://www.ruby-toolbox.com/categories/rails_authorization">ruby-toolbox</a>
 </div>
 
-
-## TheRoleBootstrap3Ui
-
-Admin UI for gem TheRole
-
-Version based on Bootstrap3
-
-### GUI
+<hr>
 
 <table>
 <tr>
   <td>TheRole management web interface => localhost:3000/admin/roles</td>
 </tr>
 <tr>
-  <td><img src="https://github.com/the-teacher/the_role/raw/master/pic.png" alt="TheRole"></td>
+  <td>
+    <img src="https://raw.githubusercontent.com/TheRole/the_role_api/master/docs/gui.png" alt="TheRole GUI">
+  </td>
 </tr>
 </table>
 
