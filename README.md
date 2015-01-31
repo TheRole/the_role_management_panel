@@ -39,91 +39,97 @@
 </tr>
 </table>
 
+#### Import/Export
+
+If you have 2 Rails apps, based on TheRole - you can move roles between them via export/import abilities of TheRole Management Panel.
+It can be usefull for Rails apps based on one engine.
+
+<div align="center" class='center' style="text-align:center">
+  <img src="./docs/import_export.png" alt="TheRole. Authorization gem for Ruby on Rails with Administrative interface">
+</div>
+
 ## Installation
 
-Gemfile
+#### 0. Gemfile
 
 ```ruby
-  gem 'the_role_bootstrap3_ui'
+gem 'the_role_api',              '~> 3.0.0'
+gem 'the_role_management_panel', '~> 3.0.0'
 ```
 
-And then execute:
-
-```sh
-  $ bundle
-```
-
-Or install it yourself as:
-
-```sh
-  $ gem install the_role_bootstrap3_ui
-```
-
-## Usage
-
-### Assets and Bootstrap
-
-**application.css**
-
-```
-//= require bootstrap
-```
-
-**application.js**
-
-```
-//= require jquery
-//= require jquery_ujs
-
-//= require bootstrap
-//= require the_role_editinplace
-```
-
-## MIT
-
-zykin-ilya@ya.ru
-
-2014
-
-===
-
-### GUI
-
-:warning: UI moved in **the_role_bootstrap3_ui** gem
-
-https://github.com/the-teacher/the_role_bootstrap3_ui
-
-We are waiting for **foundation** version of UI
-
-<table>
-<tr>
-  <td>TheRole management web interface => localhost:3000/admin/roles</td>
-</tr>
-<tr>
-  <td><img src="https://github.com/the-teacher/the_role/raw/master/pic.png" alt="TheRole"></td>
-</tr>
-</table>
-
-puts following yields into your layout:
+or
 
 ```ruby
-= yield :role_sidebar
-= yield :role_main
+gem 'the_role', '~> 3.0.0'
 ```
 
-### Rails 4 version
+and after that
 
-```
-gem 'the_role', '~> 2.5.2'
-
-gem 'the_role_bootstrap3_ui'
+```sh
+bundle
 ```
 
-Please read *the_role_bootstrap3_ui* docs to know more about assets
+#### 1. Assets and Bootstrap
 
-https://github.com/the-teacher/the_role_bootstrap3_ui
+<i>app/assets/stylesheets/manage_panel.css</i>
 
+```
+//= require the_notification/vendors/toastr
 
-## If you have any questions
+@import "bootstrap-sprockets";
+@import "bootstrap";
+```
 
-Please, before asking anything try to launch and play with the **[Dummy App](spec/dummy_app)** in the spec folder. Maybe an example integration will be better than any documentation. Thank you!
+<i>app/assets/javascript/manage_panel.js.coffee</i>
+
+```
+#= require jquery
+#= require jquery_ujs
+
+#= require bootstrap
+#= require the_role_editinplace
+
+#= require the_notification/vendors/toastr
+#= require the_notification
+
+$ ->
+  TheNotification.show_notifications()
+```
+
+```haml
+!!!
+%html
+  %head
+    %title TheRole manage Panel
+    = stylesheet_link_tag    :manage_panel
+    = javascript_include_tag :manage_panel
+    = stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+
+    = csrf_meta_tags
+  %body
+    .container
+      .row
+        .col-md-12.header
+          %h2 TheRole Manage Panel
+          = render partial: 'the_notification/flash', locals: { format: :json }
+
+      .row
+        .col-md-3.manage_panel
+          = yield :role_sidebar
+
+        .col-md-9.main_content
+          = yield
+          = yield :role_main
+```
+
+### MIT License
+
+Copyright (c) 2012-2015 [Ilya N.Zykin]
+
+#### Maintainers
+
+@the-teacher, @seuros, @sedx
+
+#### Contributors
+
+@igmarin, @doabit, @linjunpop, @egb3
