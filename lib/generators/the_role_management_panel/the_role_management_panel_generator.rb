@@ -2,6 +2,7 @@ class TheRoleManagementPanelGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../../../../', __FILE__)
   # argument :xname, type: :string, default: :xname
 
+  # bundle exec rails g the_role_management_panel NAME
   def generate_controllers
     if gen_name == 'install'
       cp_views
@@ -13,6 +14,8 @@ class TheRoleManagementPanelGenerator < Rails::Generators::NamedBase
       cp_controllers
     elsif gen_name == 'views'
       cp_views
+    elsif gen_name == 'help'
+      cp_help
     else
       puts 'TheRole ManagementPanel Generator - wrong Name'
       puts 'Try to use install'
@@ -35,5 +38,9 @@ class TheRoleManagementPanelGenerator < Rails::Generators::NamedBase
 
   def cp_views
     directory "app/views", "app/views"
+  end
+
+  def cp_help
+    puts File.read "#{ TheRoleManagementPanelGenerator.source_root }/lib/generators/the_role_management_panel/USAGE"
   end
 end
