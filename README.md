@@ -8,7 +8,7 @@
 </p>
 
 <p align="center" class='center' style="text-align:center">
-  <img src="https://raw.githubusercontent.com/TheRole/TheRoleApi/master/docs/the_role.png" alt="TheRole. Authorization gem for Ruby on Rails with Administrative interface">
+  <img src="https://raw.githubusercontent.com/TheRole/docs/master/images/the_role.png" alt="TheRole. Authorization gem for Ruby on Rails with Administrative interface">
 </p>
 
 <p align="center" class='center' style="text-align:center">
@@ -34,7 +34,7 @@
 </tr>
 <tr>
   <td>
-    <img src="https://raw.githubusercontent.com/TheRole/the_role_api/master/docs/gui.png" alt="TheRole GUI">
+    <img src="https://raw.githubusercontent.com/TheRole/docs/master/images/gui.png" alt="TheRole GUI">
   </td>
 </tr>
 </table>
@@ -45,7 +45,7 @@ If you have 2 Rails apps, based on TheRole - you can move roles between them via
 It can be usefull for Rails apps based on one engine.
 
 <div align="center" class='center' style="text-align:center">
-  <img src="./docs/import_export.png" alt="TheRole. Authorization gem for Ruby on Rails with Administrative interface">
+  <img src="https://raw.githubusercontent.com/TheRole/docs/master/images/import_export.png" alt="TheRole. Authorization gem for Ruby on Rails with Administrative interface">
 </div>
 
 ## Installation
