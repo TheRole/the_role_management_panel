@@ -69,57 +69,52 @@ and after that
 bundle
 ```
 
-#### 1. Assets and Bootstrap
+#### 1. Check TheRole initializer
 
-<i>app/assets/stylesheets/manage_panel.css</i>
+<i>config/initializers/the_role.rb</i>
 
-```
-//= require the_notification/vendors/toastr
+```ruby
+TheRole.configure do |config|
+  # [ Devise => :authenticate_user! | Sorcery => :require_login ]
+  config.login_required_method = :authenticate_user!
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-```
+  # layout for Management panel
+  config.layout = :the_role_management_panel
 
-<i>app/assets/javascript/manage_panel.js.coffee</i>
+  # config.default_user_role          = nil
+  # config.first_user_should_be_admin = false
 
-```
-#= require jquery
-#= require jquery_ujs
-
-#= require bootstrap
-#= require the_role_editinplace
-
-#= require the_notification/vendors/toastr
-#= require the_notification
-
-$ ->
-  TheNotification.show_notifications()
+  # config.access_denied_method       = :access_denied
+  # config.destroy_strategy           = :restrict_with_exception # can be nil
+end
 ```
 
-```haml
-!!!
-%html
-  %head
-    %title TheRole manage Panel
-    = stylesheet_link_tag    :manage_panel
-    = javascript_include_tag :manage_panel
-    = stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+#### 2. Add Routing mixin
 
-    = csrf_meta_tags
-  %body
-    .container
-      .row
-        .col-md-12.header
-          %h2 TheRole Manage Panel
-          = render partial: 'the_notification/flash', locals: { format: :json }
+<i>config/config/routes.rb</i>
 
-      .row
-        .col-md-3.manage_panel
-          = yield :role_sidebar
+```ruby
+RailsApp::Application.routes.draw do
+  # ... code ...
+  #
+  # something like this:
+  # root to: 'welcome#index'
+  # devise_for :users
+  # resources  :users
+  # resources  :pages
 
-        .col-md-9.main_content
-          = yield
-          = yield :role_main
+  TheRoleManagementPanel::Routes.mixin(self)
+end
+```
+
+#### 3. Add link to TheRole Manage Panel
+
+<i>HAML</i>
+
+```ruby
+- if current_user
+  - if current_user.admin? || current_user.moderator?(:roles)
+    = link_to 'TheRole Manage Panel',  admin_roles_path
 ```
 
 ### MIT License

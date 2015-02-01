@@ -1,0 +1,3 @@
+$ ->
+  TheNotification.show_notifications()
+
