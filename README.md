@@ -34,7 +34,7 @@
 </tr>
 <tr>
   <td>
-    <img src="https://raw.githubusercontent.com/TheRole/docs/master/images/gui.png?1" alt="TheRole GUI">
+    <img src="https://raw.githubusercontent.com/TheRole/docs/master/images/gui.png?2" alt="TheRole GUI">
   </td>
 </tr>
 </table>
