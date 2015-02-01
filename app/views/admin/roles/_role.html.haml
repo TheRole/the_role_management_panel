@@ -17,26 +17,22 @@
       = form_for(role, url: change_admin_role_path(role), html: { class: "form-inline" } ) do |f|
         .row
           .col-md-12
-            %h3.holder
-              = t '.role_name'
+            %h3.holder{ style: 'margin: 3px' }
+              = t(:role_name, scope: t_scope) + ':'
               %span.a= role.name
               %span.b{ style: hidden }
                 .form-group= f.text_field :name, class: "form-control"
                 = yield(:role_update_btn_set)
 
-        .row
-          .col-md-12
-            %h5.holder
-              = t '.title'
+            %h5.holder{ style: 'margin: 3px' }
+              = t(:title, scope: t_scope) + ':'
               %span.a= role.title
               %span.b{ style: hidden }
                 .form-group= f.text_field :title, class: "form-control"
                 = yield(:role_update_btn_set)
 
-        .row
-          .col-md-12
-            %h5.holder
-              = t '.role_description'
+            %h5.holder{ style: 'margin: 3px' }
+              = t(:role_description, scope: t_scope) + ':'
               %span.a= role.description
               %span.b{ style: hidden }
                 .form-group= f.text_field :description, class: "form-control"
@@ -76,11 +72,11 @@
                           %li.success= link_to t(:enable, scope: t_scope),  rule_on_admin_role_section_path(role, section, :name => rule), :method => :put
                           %li.info=    link_to t(:disable, scope: t_scope), rule_off_admin_role_section_path(role, section, :name => rule), :method => :put
                           %li.divider
-                          %li.error= link_to t(:delete_rule, scope: t_scope), destroy_rule_admin_role_section_path(role, section, :name => rule), method: :delete, data: { confirm: t(".rule_delete_confirm") }
+                          %li.error= link_to t(:delete_rule, scope: t_scope), destroy_rule_admin_role_section_path(role, section, :name => rule), method: :delete, data: { confirm: t(:rule_delete_confirm, scope: t_scope) }
 
   .panel.panel-success
     .panel-heading
-      = t '.create_section'
+      = t(:create_section, scope: t_scope)
     .panel-body
       = form_tag admin_role_sections_path(role), class: "form-inline"do |f|
         .form-group
@@ -89,7 +85,7 @@
 
   .panel.panel-success
     .panel-heading
-      = t '.create_rule'
+      = t(:create_rule, scope: t_scope)
     .panel-body
       = form_tag create_rule_admin_role_sections_path(role), role: :form, class: "form-inline" do |f|
         .form-group

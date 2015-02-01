@@ -61,11 +61,13 @@ class Admin::RoleSectionsController < ApplicationController
 
   def destroy
     section_name = params[:id]
+
     if @role.delete_section section_name
       flash[:notice] = t(:section_deleted, scope: t_scope)
     else
       flash[:error]  = t(:section_not_deleted, scope: t_scope)
     end
+
     redirect_to_edit
   end
 

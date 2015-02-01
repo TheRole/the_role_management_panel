@@ -25,9 +25,9 @@ ru:
         description: Описание роли
         based_on_role: "Новая роль будет основана на:"
       role:
-        role_name: 'Имя роли:'
-        title:     'Заголовок:'
-        role_description: 'Описание:'
+        role_name: Имя роли
+        title:     Заголовок
+        role_description: Описание
         delete_section: Удалить раздел
         section_delete_confirm: 'Вы хотите удалить раздел?'
         rule_delete_confirm: 'Вы хотите удалить правило?'
@@ -40,9 +40,10 @@ ru:
         create_rule: Создать правило
         role_export:  Выгрузить роль
       sidebar:
-        roles_export: Выгрузить роли
-        roles_import: Загрузить роли
         roles_list: Список ролей
         new_role: Создать новую Роль
         delete_role_confirm: 'Удалить роль? Это может быть опасно! Уверены?'
+
+        roles_export: Выгрузить роли
+        roles_import: Загрузить роли
         roles_import_confirm: 'Загрузка внешних ролей может существенно изменить настройки доступа. Вы уверены?'

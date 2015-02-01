@@ -53,11 +53,11 @@ class Admin::RolesController < ApplicationController
     roles_hash.except!('export_comment')
 
     if roles_hash.keys.empty?
-      flash[:error] = t 'the_role.cant_be_imported'
+      flash[:error] = t(:cant_be_imported, scope: t_scope)
     else
       roles_list = roles_hash.keys.join(', ')
       update_roles(roles_hash)
-      flash[:notice] =  t 'the_role.imported_roles', { roles_list: roles_list }
+      flash[:notice] =  t(:imported_roles, scope: t_scope, roles_list: roles_list)
     end
 
     redirect_to admin_roles_url
@@ -67,38 +67,42 @@ class Admin::RolesController < ApplicationController
     @role = Role.new role_params
 
     if @role.save
-      flash[:notice] = t 'the_role.role_created'
+      flash[:notice] = t(:role_created, scope: t_scope)
       redirect_to_edit
     else
-      render :action => :new
+      render action: :new
     end
   end
 
   def update
     if @role.update_role params[:role][:the_role]
-      flash[:notice] = t 'the_role.role_updated'
+      flash[:notice] = t(:role_updated, scope: t_scope)
       redirect_to_edit
     else
-      render :action => :edit
+      render action: :edit
     end
   end
 
   def change
     if @role.update_attributes!(role_params)
-      flash[:notice] = t 'the_role.role_updated'
+      flash[:notice] = t(:role_updated, scope: t_scope)
       redirect_to_edit
     else
-      render :action => :edit
+      render action: :edit
     end
   end
 
   def destroy
     @role.destroy
-    flash[:notice] = t 'the_role.role_deleted'
+    flash[:notice] = t(:role_deleted, scope: t_scope)
     redirect_to admin_roles_url
   end
 
   protected
+
+  def t_scope
+    [:the_role_gui]
+  end
 
   def update_roles roles_hash
     roles_hash.except('export_comment').each_pair do |role_name, role_data|
@@ -112,14 +116,17 @@ class Admin::RolesController < ApplicationController
   end
 
   def role_params
-    params.require(:role).permit(:name, :title, :description, :the_role, :based_on_role)
+    params.require(:role).permit(%w[
+      name
+      title
+      description
+      the_role
+      based_on_role
+    ])
   end
 
   def role_find
     @role = Role.find params[:id]
-
-    # TheRole: You should define OWNER CHECK OBJECT
-    # When editable object was found
     @owner_check_object = @role
   end
 

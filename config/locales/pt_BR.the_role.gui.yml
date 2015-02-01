@@ -24,9 +24,9 @@ pt-BR:
         description: Descrição do papel (texto)
         based_on_role: "Novo papel baseado em:"
       role:
-        role_name: 'Nome do papel:'
-        title:     'Título:'
-        role_description: 'Descrição do papel:'
+        role_name: Nome do papel
+        title:     Título
+        role_description: Descrição do papel
         delete_section: Excluir sessão
         section_delete_confirm: 'Deseja excluir a seção?'
         rule_delete_confirm: 'Deseja excluir a regra?'
@@ -41,3 +41,7 @@ pt-BR:
         roles_list: Lista de Papéis
         new_role: Criar novo papel
         delete_role_confirm: 'Tem certeza? Isto pode ser perigoso!'
+
+        roles_export: "Roles Export"
+        roles_import: "Roles Import"
+        roles_import_confirm: 'It can change role policy of your system. Are you sure?'

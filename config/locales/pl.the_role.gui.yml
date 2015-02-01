@@ -23,9 +23,9 @@ pl:
         title: Tytuł roli (text)
         description: Opis roli (text)
       role:
-        role_name: 'Nazwa roli:'
-        title:     'Tytuł:'
-        role_description: 'Opis roli:'
+        role_name: Nazwa roli
+        title:     Tytuł
+        role_description: Opis roli
         delete_section: Skasuj sekcje
         section_delete_confirm: 'Czy aby napewno chcesz skasować sekcję?'
         rule_delete_confirm: 'Czy aby na pewno chcesz usunąć rolę?'
@@ -40,3 +40,7 @@ pl:
         roles_list: Lista ról
         new_role: Utwórz nową rolę
         delete_role_confirm: 'Czy jesteś pewien? To może być niebezpieczne!'
+
+        roles_export: "Roles Export"
+        roles_import: "Roles Import"
+        roles_import_confirm: 'It can change role policy of your system. Are you sure?'

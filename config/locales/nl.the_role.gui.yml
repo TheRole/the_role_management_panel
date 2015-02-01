@@ -24,9 +24,9 @@ nl:
         description: Beschrijving van toegangsprofiel (text)
         based_on_role: "Nieuwe toegansprofiel wordt gebaseerd op:"
       role:
-        role_name: 'Toegangsprofiel naam:'
-        title:     'Titel:'
-        role_description: 'Omschrijving van het toegangsprofiel:'
+        role_name: Toegangsprofiel naam
+        title:     Titel
+        role_description: Omschrijving van het toegangsprofiel
         delete_section: Verwijder sectie
         section_delete_confirm: 'Wil je de sectie verwijderen?'
         rule_delete_confirm: 'Wil je het toegangsprofiel verwijderen?'
@@ -41,3 +41,7 @@ nl:
         roles_list: Lijst toegangsprofielen
         new_role: Maak nieuw toegansprofiel
         delete_role_confirm: 'Weet je het zeker? Dit kan gevaarlijk zijn!'
+
+        roles_export: "Roles Export"
+        roles_import: "Roles Import"
+        roles_import_confirm: 'It can change role policy of your system. Are you sure?'

@@ -23,9 +23,9 @@ zh_CN:
         title: 角色标题 (文本)
         description: 角色描述 (文本)
       role:
-        role_name: '角色名称:'
-        title:     '角色标题:'
-        role_description: '角色描述:'
+        role_name: 角色名称
+        title:     角色标题
+        role_description: 角色描述
         delete_section: 删除章节
         section_delete_confirm: '你想要删除章节?'
         rule_delete_confirm: '你想删除规则?'
@@ -40,3 +40,7 @@ zh_CN:
         roles_list: 角色列表
         new_role: 创建新角色
         delete_role_confirm: '你确定? 可能存在风险!'
+
+        roles_export: "Roles Export"
+        roles_import: "Roles Import"
+        roles_import_confirm: 'It can change role policy of your system. Are you sure?'
