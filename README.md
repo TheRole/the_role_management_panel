@@ -31,9 +31,7 @@
 <table>
 <tr>
   <td>
-    <b align="center" class='center' style="text-align:center">
-      http://localhost:3000/admin/roles
-    </b>
+    <b>http://localhost:3000/admin/roles</b>
   </td>
 </tr>
 <tr>
