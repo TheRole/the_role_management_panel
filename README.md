@@ -94,12 +94,6 @@ end
 ```ruby
 RailsApp::Application.routes.draw do
   # ... code ...
-  #
-  # something like this:
-  # root to: 'welcome#index'
-  # devise_for :users
-  # resources  :users
-  # resources  :pages
 
   TheRoleManagementPanel::Routes.mixin(self)
 end
