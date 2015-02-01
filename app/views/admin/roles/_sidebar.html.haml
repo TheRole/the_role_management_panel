@@ -26,14 +26,14 @@
         .panel-heading
           = t('.roles_export')
         .panel-body
-          / = link_to t('.roles_export'), export_admin_roles_path, class: "btn btn-xs btn-warning"
+          = link_to t('.roles_export'), export_admin_roles_path, class: "btn btn-xs btn-warning"
 
       .panel.panel-default
         .panel-heading
           =t('.roles_import')
         .panel-body
-          / = form_tag import_admin_roles_path, multipart: true, method: :patch do
-          /   .form-group
-          /     = file_field_tag :roles
-          /   .form-group
-          /     = submit_tag t('.roles_import'), class: "btn btn-xs btn-warning", data: { confirm: t('.roles_import_confirm') }
+          = form_tag import_admin_roles_path, multipart: true, method: :patch do
+            .form-group
+              = file_field_tag :roles
+            .form-group
+              = submit_tag t('.roles_import'), class: "btn btn-xs btn-warning", data: { confirm: t('.roles_import_confirm') }

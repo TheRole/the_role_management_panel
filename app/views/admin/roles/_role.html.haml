@@ -10,7 +10,7 @@
   .panel.panel-primary
     .panel-heading
       Role Info (edit in place)
-      / = link_to t('.role_export'), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right"
+      = link_to t('.role_export'), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right"
     .panel-body
       = form_for(role, url: change_admin_role_path(role), html: { class: "form-inline" } ) do |f|
         .row

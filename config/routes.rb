@@ -3,16 +3,6 @@ module TheRoleManagementPanel
   class Routes
     def self.mixin mapper
       mapper.resources :roles, except: :show do
-        mapper.collection do
-          mapper.get   :export
-          mapper.patch :import
-        end
-
-        mapper.member do
-          mapper.get   :role_export
-          mapper.patch :change
-        end
-
         mapper.resources :sections, controller: :role_sections, only: :none do
           mapper.collection do
             mapper.post :create
@@ -31,7 +21,15 @@ module TheRoleManagementPanel
 
       mapper.namespace :admin do
         mapper.resources :roles, except: :show do
-          mapper.patch :change, on: :member
+          mapper.collection do
+            mapper.get   :export
+            mapper.patch :import
+          end
+
+          mapper.member do
+            mapper.get   :role_export
+            mapper.patch :change
+          end
 
           mapper.resources :sections, controller: :role_sections, only: :none do
             mapper.collection do
