@@ -14,6 +14,8 @@ class TheRoleManagementPanelGenerator < Rails::Generators::NamedBase
       cp_controllers
     elsif gen_name == 'views'
       cp_views
+    elsif gen_name == 'locales'
+      cp_locales
     elsif gen_name == 'help'
       cp_help
     else
@@ -29,15 +31,23 @@ class TheRoleManagementPanelGenerator < Rails::Generators::NamedBase
   end
 
   def cp_assets
-    directory "app/assets", "app/assets"
+    directory 'app/assets',
+              'app/assets'
   end
 
   def cp_controllers
-    directory "app/controllers", "app/controllers"
+    directory 'app/controllers',
+              'app/controllers'
   end
 
   def cp_views
-    directory "app/views", "app/views"
+    directory 'app/views',
+              'app/views'
+  end
+
+  def cp_locales
+    directory 'config/locales',
+              'config/locales'
   end
 
   def cp_help

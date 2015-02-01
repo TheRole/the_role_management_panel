@@ -24,6 +24,9 @@ TheRole Management Panel
   > bundle exec rails g the_role_management_panel views
   - Install views
 
+  > bundle exec rails g the_role_management_panel locales
+  - Install locales
+
 ---------------------------------------
 ~ TheRole Management Panel
 ---------------------------------------
