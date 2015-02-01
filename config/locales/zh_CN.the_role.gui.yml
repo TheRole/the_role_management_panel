@@ -1,5 +1,5 @@
 zh_CN:
-  the_role:
+  the_role_gui:
     role_created:             角色已创建
     role_updated:             角色已更新
     role_deleted:             角色已删除
@@ -16,7 +16,6 @@ zh_CN:
     section_rule_not_deleted: "章节的规则没有被删除"
     imported_roles:           "Imported roles: %{roles_list}"
 
-  admin:
     roles:
       new:
         create: 创建新角色

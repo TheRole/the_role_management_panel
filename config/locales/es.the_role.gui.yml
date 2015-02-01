@@ -1,5 +1,5 @@
 es:
-  the_role:
+  the_role_gui:
     role_created:             Rol creado
     role_updated:             Rol actualizado
     role_deleted:             Rol eliminado
@@ -16,7 +16,6 @@ es:
     section_rule_not_deleted: Regla de sección no eliminada
     imported_roles:           "Imported roles: %{roles_list}"
 
-  admin:
     roles:
       new:
         create: Crear nuevo rol

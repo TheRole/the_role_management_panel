@@ -1,3 +1,5 @@
+- t_scope = [ :the_role_gui, :roles, :role ]
+
 - content_for :role_update_btn_set do
   .btn-group
     %a.btn.btn-warning
@@ -10,7 +12,7 @@
   .panel.panel-primary
     .panel-heading
       Role Info (edit in place)
-      = link_to t('.role_export'), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right"
+      = link_to t(:role_export, scope: t_scope), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right"
     .panel-body
       = form_for(role, url: change_admin_role_path(role), html: { class: "form-inline" } ) do |f|
         .row
@@ -52,7 +54,7 @@
               .col-md-3
                 .delete
                   .btn-group
-                    = button_to t('.delete_section'), admin_role_section_path(role, section), method: :delete, class: 'btn btn-danger', data: { confirm: t('.section_delete_confirm') }
+                    = button_to t(:delete_section, scope: t_scope), admin_role_section_path(role, section), method: :delete, class: 'btn btn-danger', data: { confirm: t(:section_delete_confirm, scope: t_scope) }
 
           .panel-body
             .rules
@@ -66,15 +68,15 @@
                     .controls
                       .btn-group
                         - klass = value ? :success : :info
-                        - state = value ? t('.enable') : t('.disable')
+                        - state = value ? t(:enable, scope: t_scope) : t(:disable, scope: t_scope)
                         %button{ class: "btn btn-#{klass}" }= state
                         %button{ class: "btn btn-#{klass} dropdown-toggle", 'data-toggle' => :dropdown }
                           %span.caret
                         %ul.dropdown-menu
-                          %li.success= link_to t('.enable'),  rule_on_admin_role_section_path(role, section, :name => rule), :method => :put
-                          %li.info=    link_to t('.disable'), rule_off_admin_role_section_path(role, section, :name => rule), :method => :put
+                          %li.success= link_to t(:enable, scope: t_scope),  rule_on_admin_role_section_path(role, section, :name => rule), :method => :put
+                          %li.info=    link_to t(:disable, scope: t_scope), rule_off_admin_role_section_path(role, section, :name => rule), :method => :put
                           %li.divider
-                          %li.error= link_to t('.delete_rule'), destroy_rule_admin_role_section_path(role, section, :name => rule), method: :delete, data: { confirm: t(".rule_delete_confirm") }
+                          %li.error= link_to t(:delete_rule, scope: t_scope), destroy_rule_admin_role_section_path(role, section, :name => rule), method: :delete, data: { confirm: t(".rule_delete_confirm") }
 
   .panel.panel-success
     .panel-heading
@@ -82,8 +84,8 @@
     .panel-body
       = form_tag admin_role_sections_path(role), class: "form-inline"do |f|
         .form-group
-          = text_field_tag :section_name, '', class: "form-control", placeholder: t('.new_section_placeholder')
-        = submit_tag t('.create_section'), class: "btn btn-success"
+          = text_field_tag :section_name, '', class: "form-control", placeholder: t(:new_section_placeholder, scope: t_scope)
+        = submit_tag t(:create_section, scope: t_scope), class: "btn btn-success"
 
   .panel.panel-success
     .panel-heading
@@ -95,5 +97,5 @@
             - role.to_hash.each_pair do |section, rules|
               %option{ value: section }= section
         .form-group
-          = text_field_tag :rule_name, '', class: "form-control", placeholder: t('.new_rule_placeholder')
-        = submit_tag t('.create_rule'), class: "btn btn-success"
+          = text_field_tag :rule_name, '', class: "form-control", placeholder: t(:new_rule_placeholder, scope: t_scope)
+        = submit_tag t(:create_rule, scope: t_scope), class: "btn btn-success"

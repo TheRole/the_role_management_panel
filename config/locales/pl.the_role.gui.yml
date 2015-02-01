@@ -1,5 +1,5 @@
 pl:
-  the_role:
+  the_role_gui:
     role_created:             Rola dodana
     role_updated:             Rola zaktualizowana
     role_deleted:             Role skasowana
@@ -16,7 +16,6 @@ pl:
     section_rule_not_deleted: "Reguła nie skasowana"
     imported_roles:           "Imported roles: %{roles_list}"
 
-  admin:
     roles:
       new:
         create: Utwórz nową rolę

@@ -11,19 +11,19 @@ class Admin::RoleSectionsController < ApplicationController
 
   def create
     if @role.create_section params[:section_name]
-      flash[:notice] = t 'the_role.section_created'
+      flash[:notice] = t(:section_created, scope: t_scope)
     else
-      flash[:error]  = t 'the_role.section_not_created'
+      flash[:error]  = t(:section_not_created, scope: t_scope)
     end
 
     redirect_to_edit
   end
-  
+
   def create_rule
     if @role.create_rule params[:section_name], params[:rule_name]
-      flash[:notice] = t 'the_role.section_rule_created'
+      flash[:notice] = t(:section_rule_created, scope: t_scope)
     else
-      flash[:error]  = t 'the_role.section_rule_not_created'
+      flash[:error]  = t(:section_rule_not_created, scope: t_scope)
     end
 
     redirect_to_edit
@@ -31,9 +31,9 @@ class Admin::RoleSectionsController < ApplicationController
 
   def rule_on
     if @role.rule_on @section_name, @rule_name
-      flash[:notice] = t 'the_role.section_rule_on'
+      flash[:notice] = t(:section_rule_on, scope: t_scope)
     else
-      flash[:error]  = t 'the_role.state_not_changed'
+      flash[:error]  = t(:state_not_changed, scope: t_scope)
     end
 
     redirect_to_edit
@@ -41,9 +41,9 @@ class Admin::RoleSectionsController < ApplicationController
 
   def rule_off
     if @role.rule_off @section_name, @rule_name
-      flash[:notice] = t 'the_role.section_rule_off'
+      flash[:notice] = t(:section_rule_off, scope: t_scope)
     else
-      flash[:error]  = t 'the_role.state_not_changed'
+      flash[:error]  = t(:state_not_changed, scope: t_scope)
     end
 
     redirect_to_edit
@@ -51,25 +51,29 @@ class Admin::RoleSectionsController < ApplicationController
 
   def destroy_rule
     if @role.delete_rule @section_name, @rule_name
-      flash[:notice] = t 'the_role.section_rule_deleted'
+      flash[:notice] = t(:section_rule_deleted, scope: t_scope)
     else
-      flash[:error]  = t 'the_role.section_rule_not_deleted'
+      flash[:error]  = t(:section_rule_not_deleted, scope: t_scope)
     end
 
     redirect_to_edit
   end
-  
+
   def destroy
     section_name = params[:id]
     if @role.delete_section section_name
-      flash[:notice] = t 'the_role.section_deleted'
+      flash[:notice] = t(:section_deleted, scope: t_scope)
     else
-      flash[:error]  = t 'the_role.section_not_deleted'
+      flash[:error]  = t(:section_not_deleted, scope: t_scope)
     end
     redirect_to_edit
   end
-  
+
   protected
+
+  def t_scope
+    [:the_role_gui]
+  end
 
   def section_rule_names
     @section_name = params[:id]

@@ -16,7 +16,6 @@ en:
     section_rule_not_deleted: "Section rule not deleted"
     imported_roles:           "Imported roles: %{roles_list}"
 
-  admin:
     roles:
       new:
         create: Create new Role

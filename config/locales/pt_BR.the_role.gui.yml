@@ -1,5 +1,5 @@
 pt-BR:
-  the_role:
+  the_role_gui:
     role_created:             Papel criado
     role_updated:             Papel atualizado
     role_deleted:             Papel excluído
@@ -16,7 +16,6 @@ pt-BR:
     section_rule_not_deleted: "Regra de seção não foi excluída"
     imported_roles:           "Imported roles: %{roles_list}"
 
-  admin:
     roles:
       new:
         create: Criar novo Papel

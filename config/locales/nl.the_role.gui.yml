@@ -1,5 +1,5 @@
 nl:
-  the_role:
+  the_role_gui:
     role_created:             Toegangsprofiel aangemaakt
     role_updated:             Toegangsprofiel bijgewerkt
     role_deleted:             Toegangsprofiel verwijderd
@@ -16,7 +16,6 @@ nl:
     section_rule_not_deleted: "Sectieprofiel niet verwijderd"
     imported_roles:           "Imported roles: %{roles_list}"
 
-  admin:
     roles:
       new:
         create: Maak nieuwe toegangsprofiel aan
