@@ -47,6 +47,12 @@
   </a>
 </div>
 
+<div align="center" class='center' style="text-align:center">
+  <a href="https://github.com/the-teacher/the_role">
+    <img src="https://raw.githubusercontent.com/TheRole/docs/master/images/main.png" alt="gem TheRole">
+  </a>
+</div>
+
 <hr>
 
 ### MIT License
