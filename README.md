@@ -30,7 +30,11 @@
 
 <table>
 <tr>
-  <td>TheRole management web interface => localhost:3000/admin/roles</td>
+  <td>
+    <b align="center" class='center' style="text-align:center">
+      http://localhost:3000/admin/roles
+    </b>
+  </td>
 </tr>
 <tr>
   <td>
