@@ -34,7 +34,7 @@
         .panel-heading
           =t(:roles_import, scope: t_scope)
         .panel-body
-          = form_tag import_admin_roles_path, multipart: true, method: :patch do
+          = form_tag import_admin_roles_path, multipart: true, method: :put do
             .form-group
               = file_field_tag :roles
             .form-group

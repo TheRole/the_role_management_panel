@@ -22,13 +22,13 @@ module TheRoleManagementPanel
       mapper.namespace :admin do
         mapper.resources :roles, except: :show do
           mapper.collection do
-            mapper.get   :export
-            mapper.patch :import
+            mapper.get :export
+            mapper.put :import
           end
 
           mapper.member do
-            mapper.get   :role_export
-            mapper.patch :change
+            mapper.get :role_export
+            mapper.put :change
           end
 
           mapper.resources :sections, controller: :role_sections, only: :none do
