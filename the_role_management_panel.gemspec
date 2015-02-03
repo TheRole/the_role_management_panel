@@ -22,8 +22,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
 
   spec.add_dependency 'haml'
-  spec.add_dependency 'the_notification'
+  spec.add_dependency 'the_notification', '~> 0.5.0'
 
-  spec.add_dependency 'coffee-rails'
   spec.add_dependency 'rails', ['>= 3', '< 5']
+  spec.add_dependency 'bootstrap-sass', '~> 3.3.1'
+  spec.add_dependency 'sass-rails',     '>= 3.2'
+  spec.add_dependency 'coffee-rails'
 end

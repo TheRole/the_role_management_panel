@@ -9,7 +9,7 @@ class Admin::RolesController < ApplicationController
   before_filter :owner_required, only: [:edit, :update, :destroy, :change]
 
   def index
-    @roles = Role.all.order('created_at ASC')
+    @roles = Role.order('created_at ASC')
   end
 
   def new
@@ -52,23 +52,23 @@ class Admin::RolesController < ApplicationController
     roles_hash = begin; JSON.parse roles_hash; rescue; {}; end
     roles_hash.except!('export_comment')
 
-    if roles_hash.keys.empty?
-      flash[:error] = t(:cant_be_imported, scope: t_scope)
+    flash = if roles_hash.keys.empty?
+      { error: t(:cant_be_imported, scope: t_scope) }
     else
       roles_list = roles_hash.keys.join(', ')
       update_roles(roles_hash)
-      flash[:notice] =  t(:imported_roles, scope: t_scope, roles_list: roles_list)
+      { notice: t(:imported_roles, scope: t_scope, roles_list: roles_list) }
     end
 
-    redirect_to admin_roles_url
+    redirect_to admin_roles_url, flash: flash
   end
 
   def create
     @role = Role.new role_params
 
     if @role.save
-      flash[:notice] = t(:role_created, scope: t_scope)
-      redirect_to_edit
+      flash = { notice: t(:role_created, scope: t_scope) }
+      redirect_to_edit flash
     else
       render action: :new
     end
@@ -76,8 +76,8 @@ class Admin::RolesController < ApplicationController
 
   def update
     if @role.update_role params[:role][:the_role]
-      flash[:notice] = t(:role_updated, scope: t_scope)
-      redirect_to_edit
+      flash = { notice: t(:role_updated, scope: t_scope) }
+      redirect_to_edit flash
     else
       render action: :edit
     end
@@ -85,8 +85,8 @@ class Admin::RolesController < ApplicationController
 
   def change
     if @role.update_attributes!(role_params)
-      flash[:notice] = t(:role_updated, scope: t_scope)
-      redirect_to_edit
+      flash = { notice: t(:role_updated, scope: t_scope) }
+      redirect_to_edit flash
     else
       render action: :edit
     end
@@ -94,8 +94,8 @@ class Admin::RolesController < ApplicationController
 
   def destroy
     @role.destroy
-    flash[:notice] = t(:role_deleted, scope: t_scope)
-    redirect_to admin_roles_url
+    flash = { alert: t(:role_deleted, scope: t_scope) }
+    redirect_to admin_roles_url, flash
   end
 
   protected
@@ -116,7 +116,7 @@ class Admin::RolesController < ApplicationController
   end
 
   def role_params
-    params.require(:role).permit(%w[
+    params.require(:role).permit(*%w[
       name
       title
       description
@@ -130,8 +130,8 @@ class Admin::RolesController < ApplicationController
     @owner_check_object = @role
   end
 
-  def redirect_to_edit
-    redirect_to edit_admin_role_path @role
+  def redirect_to_edit flash = {}
+    redirect_to edit_admin_role_path(@role), flash
   end
 
 end

@@ -6,6 +6,8 @@
   .panel.panel-success
     .panel-heading= raw t(:create, scope: t_scope)
 
+    = render partial: 'the_notification/form', locals: { object: @role }
+
     .panel-body
       = form_for(@role, url: admin_roles_path, role: :form) do |f|
         %label= t(:name, scope: t_scope)
