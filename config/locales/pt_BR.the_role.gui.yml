@@ -1,8 +1,8 @@
 pt-BR:
   the_role_gui:
-    role_created:             Papel criado
-    role_updated:             Papel atualizado
-    role_deleted:             Papel excluído
+    role_created:             Perfil criado
+    role_updated:             Perfil atualizado
+    role_deleted:             Perfil excluído
     section_created:          Seção criada
     section_not_created:      Seção não foi criada
     section_rule_created:     "Regra de seção criada"
@@ -14,19 +14,19 @@ pt-BR:
     section_not_deleted:      Seção não foi excluída
     section_rule_deleted:     "Regra de seção excluída"
     section_rule_not_deleted: "Regra de seção não foi excluída"
-    imported_roles:           "Imported roles: %{roles_list}"
+    imported_roles:           "Regras importadas: %{roles_list}"
 
     roles:
       new:
-        create: Criar novo Papel
-        name: "Nome do Papel (caracteres latinos, com underscore)"
-        title: Título do papel (texto)
-        description: Descrição do papel (texto)
-        based_on_role: "Novo papel baseado em:"
+        create: Criar novo Perfil
+        name: "Nome do Perfil (caracteres latinos, com underscore)"
+        title: Título do perfil (texto)
+        description: Descrição do perfil (texto)
+        based_on_role: "Novo perfil baseado em:"
       role:
-        role_name: Nome do papel
+        role_name: Nome do perfil 
         title:     Título
-        role_description: Descrição do papel
+        role_description: Descrição do perfil
         delete_section: Excluir sessão
         section_delete_confirm: 'Deseja excluir a seção?'
         rule_delete_confirm: 'Deseja excluir a regra?'
@@ -37,11 +37,15 @@ pt-BR:
         create_section: Criar nova seção
         new_rule_placeholder: Nome da nova regra
         create_rule: Criar nova regra
+        role_info: Informações do perfil 
+        role_rules: Regras do perfil
+        role_export: "Exportar perfil"
       sidebar:
-        roles_list: Lista de Papéis
-        new_role: Criar novo papel
+        roles_list: Lista de perfis 
+        role_nav: Menu 
+        new_role: Criar novo perfil 
         delete_role_confirm: 'Tem certeza? Isto pode ser perigoso!'
 
-        roles_export: "Roles Export"
-        roles_import: "Roles Import"
-        roles_import_confirm: 'It can change role policy of your system. Are you sure?'
+        roles_export: "Exportar perfis"
+        roles_import: "Importar perfis"
+        roles_import_confirm: 'Isto pode alterar a política de regras do seu sistema. Tem certeza?'

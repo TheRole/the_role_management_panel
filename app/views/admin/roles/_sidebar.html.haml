@@ -2,13 +2,14 @@
 
 - content_for :role_sidebar do
   .panel.panel-primary
-    .panel-heading Role Nav
+    .panel-heading 
+      = t :role_nav, scope: t_scope
     .panel-body
       %h4= link_to raw('&larr; Home'), root_path
 
   .panel.panel-primary
     .panel-heading
-      = t '.roles_list'
+      = t :roles_list, scope: t_scope
     .panel-body
 
       - (@roles || Role.all).each do |role|
