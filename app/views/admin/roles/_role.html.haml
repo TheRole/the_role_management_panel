@@ -11,7 +11,7 @@
   - hidden = 'visibility:hidden'
   .panel.panel-primary
     .panel-heading
-      Role Info (edit in place)
+      = t(:role_info, scope: t_scope)
       = link_to t(:role_export, scope: t_scope), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right"
     .panel-body
       = form_for(role, url: change_admin_role_path(role), html: { class: "form-inline" } ) do |f|
@@ -39,7 +39,8 @@
                 = yield(:role_update_btn_set)
 
   .panel.panel-primary
-    .panel-heading Role rules
+    .panel-heading  
+      = t(:role_rules, scope: t_scope)
     .panel-body
       - role.to_hash.each_pair do |section, rules|
         .panel.panel-info

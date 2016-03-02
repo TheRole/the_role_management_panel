@@ -37,8 +37,11 @@ nl:
         create_section: Maak nieuwe sectie aan
         new_rule_placeholder: Naam nieuw toegansprofiel
         create_rule: Maak nieuw toegansprofiel
+        role_info: Toegangsprofiel info 
+        role_rules: Toegangsprofiel regels 
       sidebar:
         roles_list: Lijst toegangsprofielen
+        role_nav: Menu 
         new_role: Maak nieuw toegansprofiel
         delete_role_confirm: 'Weet je het zeker? Dit kan gevaarlijk zijn!'
 

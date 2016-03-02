@@ -36,8 +36,11 @@ pl:
         create_section: Utwórz nową sekcję
         new_rule_placeholder: Nazwa nowej reguły
         create_rule: Utwórz nową regułę
+        role_info: Rolę informacji  
+        role_rules: Rolę zasady 
       sidebar:
         roles_list: Lista ról
+        role_nav: Menu 
         new_role: Utwórz nową rolę
         delete_role_confirm: 'Czy jesteś pewien? To może być niebezpieczne!'
 

@@ -39,8 +39,12 @@ ru:
         new_rule_placeholder: Имя нового правила
         create_rule: Создать правило
         role_export:  Выгрузить роль
+        role_info: Информация Роль
+        role_rules: правила Ролевые
+          
       sidebar:
         roles_list: Список ролей
+        role_nav: Меню 
         new_role: Создать новую Роль
         delete_role_confirm: 'Удалить роль? Это может быть опасно! Уверены?'
 

@@ -36,8 +36,11 @@ zh_CN:
         create_section: 创建新章节
         new_rule_placeholder: 新规则名称
         create_rule: 创建新规则
+        role_info: 角色信息  
+        role_rules: 角色规则 
       sidebar:
         roles_list: 角色列表
+        role_nav: 菜单 
         new_role: 创建新角色
         delete_role_confirm: '你确定? 可能存在风险!'
 

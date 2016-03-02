@@ -38,8 +38,11 @@ en:
         new_rule_placeholder: New rule name
         create_rule: Create new rule
         role_export: "Export role"
+        role_info: Role Info (edit in place)
+        role_rules: Role rules
       sidebar:
         roles_list: Roles list
+        role_nav: Menu 
         new_role: Create new role
         delete_role_confirm: 'Are you sure? It can be dangerous!'
 
