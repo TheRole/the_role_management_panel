@@ -28,7 +28,7 @@ module TheRoleManagementPanel
 
           mapper.member do
             mapper.get :role_export
-            mapper.put :change
+            mapper.patch :change
           end
 
           mapper.resources :sections, controller: :role_sections, only: :none do
