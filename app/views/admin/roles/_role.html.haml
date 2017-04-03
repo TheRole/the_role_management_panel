@@ -12,7 +12,7 @@
   .panel.panel-primary
     .panel-heading
       = t(:role_info, scope: t_scope)
-      = link_to t(:role_export, scope: t_scope), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right"
+      = link_to t(:role_export, scope: t_scope), role_export_admin_role_path(role), class: "btn btn-xs btn-warning pull-right", id: "btn_role_export"
     .panel-body
       = form_for(role, url: change_admin_role_path(role), html: { class: "form-inline" } ) do |f|
         .row
