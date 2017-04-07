@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 module TheRoleManagementPanel
-  VERSION = "3.6"
+  VERSION = "3.8"
 end
 
 Gem::Specification.new do |spec|
