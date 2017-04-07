@@ -2,11 +2,11 @@ class Admin::RolesController < ApplicationController
   include TheRole::Controller
   layout  TheRole.config.layout.to_s
 
-  before_filter :login_required
-  before_filter :role_required
+  before_action :login_required
+  before_action :role_required
 
-  before_filter :role_find,      only: [:edit, :update, :destroy, :change, :role_export]
-  before_filter :owner_required, only: [:edit, :update, :destroy, :change]
+  before_action :role_find,      only: [:edit, :update, :destroy, :change, :role_export]
+  before_action :owner_required, only: [:edit, :update, :destroy, :change]
 
   def index
     @roles = Role.order('created_at ASC')

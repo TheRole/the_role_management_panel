@@ -2,12 +2,12 @@ class Admin::RoleSectionsController < ApplicationController
   include TheRole::Controller
   layout  TheRole.config.layout.to_s
 
-  before_filter :login_required
-  before_filter :role_required
+  before_action :login_required
+  before_action :role_required
 
-  before_filter :section_rule_names, only: [:rule_on, :rule_off, :destroy_rule]
-  before_filter :role_find,          only: [:create, :create_rule, :rule_on, :rule_off, :destroy, :destroy_rule]
-  before_filter :owner_required,     only: [:create, :create_rule, :rule_on, :rule_off, :destroy, :destroy_rule]
+  before_action :section_rule_names, only: [:rule_on, :rule_off, :destroy_rule]
+  before_action :role_find,          only: [:create, :create_rule, :rule_on, :rule_off, :destroy, :destroy_rule]
+  before_action :owner_required,     only: [:create, :create_rule, :rule_on, :rule_off, :destroy, :destroy_rule]
 
   def create
     if @role.create_section params[:section_name]
