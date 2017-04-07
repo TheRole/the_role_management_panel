@@ -1,9 +1,9 @@
-require_relative "the_role_management_panel/version"
-
-require 'the_notification'
-require 'bootstrap-sass'
-require 'sass-rails'
-require 'haml'
+%w[
+  the_notification
+  bootstrap-sass
+  sass-rails
+  slim
+].each { |lib| require lib }
 
 module TheRoleManagementPanel
   class Engine < Rails::Engine; end
