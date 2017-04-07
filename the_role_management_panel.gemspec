@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 module TheRoleManagementPanel
-  VERSION = "3.8.2"
+  VERSION = "3.8.3"
 end
 
 Gem::Specification.new do |spec|
@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'sass-rails'
   spec.add_dependency 'coffee-rails'
   spec.add_dependency 'the_notification', '~> 0.5.1'
-  spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.1'
+  spec.add_dependency 'bootstrap-sass'
 
   spec.add_dependency 'rails', ['>= 3', '< 6']
 end

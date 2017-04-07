@@ -28,7 +28,12 @@ module TheRoleManagementPanel
 
           mapper.member do
             mapper.get :role_export
-            mapper.patch :change
+
+            if mapper.respond_to?(:patch)
+              mapper.patch :change
+            else
+              mapper.put :change
+            end
           end
 
           mapper.resources :sections, controller: :role_sections, only: :none do
