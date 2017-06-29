@@ -69,7 +69,7 @@
                   .col-md-3
                     .controls
                       - klass = value ? :success : :info
-                      - state = value ? t(:enable, scope: t_scope) : t(:disable, scope: t_scope)
+                      - state = value ? t(:enabled, scope: t_scope) : t(:disabled, scope: t_scope)
                       .btn-group
                         button(class="btn btn-#{klass}") = state
                         button(class="btn btn-#{klass} dropdown-toggle", data={toggle: :dropdown})

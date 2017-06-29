@@ -33,6 +33,8 @@ ru:
         rule_delete_confirm: 'Вы хотите удалить правило?'
         enable: Включено
         disable: Отключено
+        enabled: Включено
+        disabled: Отключено
         delete_rule: Удалить правило
         new_section_placeholder: Имя нового раздела
         create_section: Создать раздел
