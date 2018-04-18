@@ -32,6 +32,8 @@ nl:
         rule_delete_confirm: 'Wil je het toegangsprofiel verwijderen?'
         enable: Activeren
         disable: Deactiveren
+        enabled: Geactiveerd
+        disabled: Gedeactiveerd
         delete_rule: Verwijder toegangsprofiel
         new_section_placeholder: Naam nieuwe sectie
         create_section: Maak nieuwe sectie aan

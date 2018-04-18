@@ -31,6 +31,8 @@ es:
         rule_delete_confirm: "¿Quieres eliminar la regla?"
         enable: Activar
         disable: Desactivar
+        enabled: Activada
+        disabled: Desactivada
         delete_rule: Eliminar regla
         new_section_placeholder: Nombre de la nueva sección
         create_section: Crear nueva sección
