@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'the_notification', '~> 0.5.1'
   spec.add_dependency 'bootstrap-sass'
 
-  spec.add_dependency 'rails', ['>= 3', '< 6']
+  spec.add_dependency 'rails', ['>= 3']
 end
