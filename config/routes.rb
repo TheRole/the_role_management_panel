@@ -3,7 +3,7 @@ module TheRoleManagementPanel
   class Routes
     def self.mixin mapper
       mapper.resources :roles, except: :show do
-        mapper.resources :sections, controller: :role_sections, only: :none do
+        mapper.resources :sections, controller: :role_sections, only: [] do
           mapper.collection do
             mapper.post :create
             mapper.post :create_rule
@@ -36,7 +36,7 @@ module TheRoleManagementPanel
             end
           end
 
-          mapper.resources :sections, controller: :role_sections, only: :none do
+          mapper.resources :sections, controller: :role_sections, only: [] do
             mapper.collection do
               mapper.post :create
               mapper.post :create_rule
